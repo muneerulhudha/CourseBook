@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
       type: "POST",
       data: $("#loginForm").serialize(),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      url: "http://localhost:8080/CB/login/login", 
+      url: "rest/login", 
       success: function(result){
           console.log("Magizhchi");
           console.log(result.success);
@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
       type: "POST",
       data: formData,
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      url: "http://localhost:8080/CB/login/register", 
+      url: "rest/signup", 
       success: function(result){
           console.log(result.success);
           if(result.success == true){
